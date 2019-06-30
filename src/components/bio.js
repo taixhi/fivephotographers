@@ -40,25 +40,16 @@ const Bio = () => {
         marginBottom: rhythm(2.5),
       }}
     >
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author}
-        style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-          minWidth: 50,
-          borderRadius: `100%`,
-        }}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
-      />
       <p>
-        Written by <strong>{author}</strong> who lives and works in San
-        Francisco building useful things.
+        Curated by photographers <strong>{author}</strong> who live in Singapore. 
+        You should follow them on Instagram
         {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
+        <a href={`https://instagram.com/hansaelee`}>
+        @hansaelee
+        </a>
+        {` and `}
+        <a href={`https://instagram.com/taixhi`}>
+        @taixhi
         </a>
       </p>
     </div>

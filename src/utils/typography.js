@@ -1,17 +1,29 @@
 import Typography from "typography"
-import Wordpress2016 from "typography-theme-wordpress-2016"
+import Kirkham from "typography-theme-kirkham"
 
-Wordpress2016.overrideThemeStyles = () => {
+Kirkham.overrideThemeStyles = () => {
   return {
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
+    "h1, h2, h3": {
+      "text-transform": "uppercase",
+    },
+    a: {
+      color: "#B63467",
+    },
+    body: {
+      'letter-spacing': '0.03rem'
+    },
   }
 }
 
-delete Wordpress2016.googleFonts
-
-const typography = new Typography(Wordpress2016)
+delete Kirkham.googleFonts
+Kirkham.bodyFontFamily = ['avenir', 'sans-serif']
+Kirkham.headerFontFamily = ['avenir', 'sans-serif']
+Kirkham.baseFontSize = '16px'
+Kirkham.bodyColor = "hsla(0,0%,0%,0.6)"
+const typography = new Typography(Kirkham)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
